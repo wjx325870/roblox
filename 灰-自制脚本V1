@@ -1,4 +1,6 @@
-   Text = "开始倒计时",
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+Text = "开始倒计时",
     Duration = 5,
 })
 wait(2)
