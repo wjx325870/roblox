@@ -212,3 +212,17 @@ Tab:AddButton({
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/zaochuan1"))()
   	end
 })
+
+Tab:AddButton({
+	Name = "防摔落(建议搭配无敌少侠飞行脚本)",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/cytj777i/Fall-injury/main/防止摔落伤害"))()
+	end
+	
+	Tab:AddButton({
+	Name = "无敌少侠飞行脚本。",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/396abc/Script/refs/heads/main/MobileFly.lua"))()
+  	end
+  	
+  	
