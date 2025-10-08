@@ -4,63 +4,9 @@ CoreGui:SetCore("SendNotification", {
     Text = "您好"..game.Players.LocalPlayer.Name.."，欢迎使用灰脚本",
     Duration = 5,
 })
-local LBLG = Instance.new("ScreenGui", getParent)
-local LBL = Instance.new("TextLabel", getParent)
-local player = game.Players.LocalPlayer
 
-LBLG.Name = "LBLG"
-LBLG.Parent = game.CoreGui
-LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-LBLG.Enabled = true
-LBL.Name = "LBL"
-LBL.Parent = LBLG
-LBL.BackgroundColor3 = Color3.new(1, 1, 1)
-LBL.BackgroundTransparency = 1
-LBL.BorderColor3 = Color3.new(0, 0, 0)
-LBL.Position = UDim2.new(0.75,0,0.010,0)
-LBL.Size = UDim2.new(0, 133, 0, 30)
-LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = "TextLabel"
-LBL.TextColor3 = Color3.new(1, 1, 1)
-LBL.TextScaled = true
-LBL.TextSize = 14
-LBL.TextWrapped = true
-LBL.Visible = true
-
-local FpsLabel = LBL
-local Heartbeat = game:GetService("RunService").Heartbeat
-local LastIteration, Start
-local FrameUpdateTable = { }
-
-local function HeartbeatUpdate()
-	LastIteration = tick()
-	for Index = #FrameUpdateTable, 1, -1 do
-		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
-	end
-	FrameUpdateTable[1] = LastIteration
-	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
-	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = ("当前时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
-end
-Start = tick()
-Heartbeat:Connect(HeartbeatUpdate)
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
-local Window = OrionLib:MakeWindow({Name = "huiscript", HidePremium = false, SaveConfig = true, ConfigFolder = "huiscript"})
-local Tab =Window:MakeTab({
-	Name = "公告",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-Tab:AddParagraph("你好"..game.Players.LocalPlayer.Name..",欢迎使用灰脚本","脚本仅供娱乐")
-Tab:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
-Tab:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
-Tab:AddButton({
-	Name = "感谢小灰毛帮助作者想名字",
-	Callback = function()
-     setclipboard("谢谢你")
-  	end
-})
+do return(function(W8,S8,pZ,zZ,nZ,tZ,lZ,qZ,kZ,w8,YZ,rZ,xZ,JZ,RZ,DZ,NZ,yZ,g8,Z8,dZ,BZ,f8,oZ,PZ,v8,LZ,hZ,A8,sZ,QZ,MZ,iZ,G8,uZ,a8,mZ,bZ,HZ,U8,CZ,cZ,KZ,IZ,A,a,S)local T8,x,L,g=0,nil,nil,nil;local v=PZ;while T8<=0X2 do if not(T8<=0X0000)then if T8==0X0001 then L={[BZ]=7,[7]=xZ,[0X6]=7,[6]=lZ,[0X3]=0x4,[1]=0X00005,[5]=0X7,[dZ]=0X006,[0X2]=0X7,[9]=0X9};T8=0X00002;else g=cZ;T8=3;end;else x=kZ or JZ.unpack;T8=0X0001;end;end;local K=(getfenv);local f=(tostring);do T8=1;end;local R,U,E,j,m,h,s=nil,nil,nil,nil,nil,nil,(nil);while true do do if not(T8<=2)then do if T8<=4 then if T8~=0x3 then do U=KZ;end;do T8=3;end;else E=zZ.char;do T8=2;end;end;else do if T8~=5 then do s=function(...)return(...)[...];end;end;break;else h=nil;T8=6;end;end;end;end;else do if T8<=0x000 then m=4294967296;T8=5;else if T8~=0x1 then j=zZ.gsub;T8=0;else R=4503599627370496;do T8=0x04;end;end;end;end;end;end;end;local r=(m-1);local W=tonumber;T8=0;local O,P,J=nil,nil,nil;do while T8~=0X00003 do do if T8<=0 then O=sZ;T8=0X1;else if T8==1 then P=DZ;T8=2;else J=hZ;T8=3;end;end;end;end;end;local V=(IZ);local l=nil;T8=0X004;local k,c,e=nil,nil,nil;do while T8~=5 do do if not(T8<=0x001)then if T8<=2 then k=nZ;T8=3;else if T8~=3 then l=function(Ee,Ae,Be)local fe=(nil);local Fe=0X000;repeat if not(Fe<=0)then if Fe~=1 then if fe>=8 then do return Ee[Ae],Ee[Ae+1],Ee[Ae+2],Ee[Ae+0X3],Ee[Ae+4],Ee[Ae+0X5],Ee[Ae+6],Ee[Ae+0x007],l(Ee,Ae+8,Be);end;elseif fe>=7 then do return Ee[Ae],Ee[Ae+0X1],Ee[Ae+2],Ee[Ae+0x003],Ee[Ae+0X4],Ee[Ae+0x005],Ee[Ae+HZ],l(Ee,Ae+mZ,Be);end;elseif fe>=6 then return Ee[Ae],Ee[Ae+1],Ee[Ae+0X02],Ee[Ae+3],Ee[Ae+0X00004],Ee[Ae+0X5],l(Ee,Ae+0x0006,Be);elseif fe>=5 then do return Ee[Ae],Ee[Ae+0X01],Ee[Ae+0X2],Ee[Ae+3],Ee[Ae+0X0004],l(Ee,Ae+0X5,Be);end;elseif fe>=4 then return Ee[Ae],Ee[Ae+lZ],Ee[Ae+0x2],Ee[Ae+0X3],l(Ee,Ae+0X4,Be);elseif fe>=RZ then do return Ee[Ae],Ee[Ae+1],Ee[Ae+0X2],l(Ee,Ae+3,Be);end;elseif not(fe>=0x2)then return Ee[Ae],l(Ee,Ae+0X00001,Be);else return Ee[Ae],Ee[Ae+0X00001],l(Ee,Ae+CZ,Be);end;do Fe=0X0003;end;else fe=Be-Ae+0X1;Fe=2;end;else if Ae>Be then do return;end;end;Fe=0x1;end;until Fe==0X003;end;T8=1;else c=rZ;T8=0X0;end;end;elseif T8==0X0 then e=string.rep;do T8=5;end;else T8=0x2;end;end;end;end;do T8=3;end;local z,D,b,T=nil,nil,nil,nil;while T8<=0X0003 do if T8<=0x1 then if T8~=0 then do T=zZ.byte;end;do T8=0X004;end;else b={[0X0]={[0x000]=0,1,CZ,0X3,0X0004,0X5,HZ,0X00007,8,0x9,0Xa,11,0X0C,0xD,0XE,15},{[0]=0X001,0X0,0X3,0X2,0x5,bZ,7,0X6,9,8,0X0000b,0Xa,13,0x00C,15,14},{[0]=0x2,3,0,0X1,HZ,7,4,5,10,0Xb,0X0008,0X9,0Xe,0X0f,0XC,13},{[0]=3,0X2,lZ,0x0,7,0X6,0X5,4,11,0xa,9,8,15,14,0X0000d,0xc},{[0]=4,5,0x06,7,0,0X1,0x2,0X3,0Xc,13,14,YZ,0X8,0X009,0Xa,QZ},{[0]=0X5,0X004,7,6,1,0,0x3,2,0x000D,12,0XF,0x0000e,9,8,0x0000b,10},{[0X0000]=6,0X0007,4,BZ,CZ,0X0003,0,0X1,14,YZ,12,MZ,0X0000a,11,0X00008,0X9},{[0]=0X7,0x006,5,bZ,3,0x2,0X1,uZ,0x000F,14,0Xd,12,0Xb,0X0A,9,0x08},{[0X0000]=8,dZ,10,0X0000B,12,MZ,0XE,15,0X0,1,0X2,0X3,0X00004,0X005,0X6,7},{[0X0]=9,8,11,10,13,12,15,14,1,0,0x0003,0x2,0X5,4,7,0X6},{[0]=0X0A,11,xZ,0x00009,14,15,yZ,0xD,2,3,0X0,0X0001,0x6,0X7,4,0x05},{[0]=11,0xA,0X9,xZ,0x000f,14,13,12,0X3,2,0X1,0,0x007,6,5,4},{[0]=0X0000c,13,0xE,0X00F,0X08,9,10,0X0000B,4,0x05,0X00006,mZ,0,0X001,2,RZ},{[0X00000]=MZ,0xc,15,qZ,0X9,8,11,10,5,4,0X7,0X006,1,0,RZ,2},{[0X00]=0XE,15,yZ,13,0Xa,11,0X8,9,6,0X0007,4,5,0X2,3,0,1},{[0X00000]=15,14,13,0x0000c,0X000B,10,9,0X8,7,6,0X0005,0X4,3,2,0X1,0X00000}};T8=0X1;end;else if T8==0X2 then do D=0X01;end;do T8=0;end;else do z=(K and K()or pZ);end;T8=0x2;end;end;end;local I=(j(U(NZ,0X5),"(.)(.)",function(YX,mX)do if mX=="H"then h=W(YX);return"";else local oq=E(W(YX..mX,0X10));do if h then local ED=e(oq,h);h=nil;return ED;else return oq;end;end;end;end;end));local H=0X00080000000;T8=3;local B,C,w,i=nil,nil,nil,nil;repeat if not(T8<=1)then if T8~=0x2 then B=iZ.yield;T8=0X2;else do C=9007199254740992;end;do T8=1;end;end;else if T8==0X0 then do i={2,0x1,3};end;T8=4;else w=LZ;T8=0;end;end;until T8>=0X4;local Y=((bit or bit32));local p={[0X00]=1,0X2,0X4,8,0x0010,32,0X40,128,oZ,512,tZ,0X000800,0X001000,0X2000,16384,0x8000,65536,131072,A8,a8,1048576,2097152,4194304,0X800000,16777216,33554432,S8,0x0008000000,0X10000000,536870912,1073741824,H,m,[0X00023]=0X800000000,[42]=0X40000000000,[0X31]=562949953421312};local t=function()local sR=(nil);for Ri=0X0000,2 do if not(Ri<=0x0)then do if Ri~=0X1 then return sR;else D=D+0X0001;end;end;else sR=T(I,D,D);end;end;end;local Q,G,OZ=Y and Y[G8]or function(q5,l5)local Q5,F5,D5=0X002,nil,(nil);while Q5<4 do if not(Q5<=1)then if Q5==2 then q5=q5%m;Q5=0X0;else D5=lZ;Q5=0X4;end;else if Q5~=0x00000 then F5=0;do Q5=3;end;else l5=l5%m;Q5=1;end;end;end;do while q5>0 and l5>0 do local ev,pv=l5%0X00010,1;local cv=(q5%16);do repeat if not(pv<=1)then do if pv~=0x2 then q5=(q5-cv)/16;do pv=0X2;end;else l5=(l5-ev)/0X10;pv=0X0;end;end;else if pv~=0 then F5=F5+b[cv][ev]*D5;pv=0X03;else D5=D5*0X10;pv=4;end;end;until pv>=0X00004;end;end;end;return F5+q5*D5+l5*D5;end,nil,nil;for jd=0,1 do do if jd~=0 then OZ=function(...)return(...)();end;else do G=v8;end;end;end;end;local M=(Y and Y[W8]or function(lB,WB)for ub=0,1 do if ub==0 then lB=lB%m;else do WB=WB%m;end;end;end;return((lB+WB)-Q(lB,WB))/0X0002;end);local u=Y and Y.bor or function(G1,p1)local b1=1;while true do if b1<=0 then return r-M(r-G1,r-p1);else if b1==1 then G1=G1%m;b1=2;else p1=p1%m;b1=0;end;end;end;end;local d=function(XX,mX,nX)if not mX then do mX=1;end;end;local tX=0X1;local gX=(nil);while tX<0X3 do if not(tX<=0)then if tX==1 then if not nX then do nX=#XX;end;end;do tX=0X002;end;else gX=nX-mX+0x1;do tX=0;end;end;else if not(gX>7997)then do return x(XX,mX,nX);end;else return l(XX,mX,nX);end;tX=0X3;end;end;end;local N=(Y and Y.rshift);local q=Y and Y[Z8];local y=Y and Y[g8]or function(VO)return r-(VO%m);end;q=q or function(IJ,oJ)local TJ=1;while TJ~=2 do if TJ~=0X0 then if oJ>=32 then do return 0X00000;end;end;TJ=0;else if not(oJ<uZ)then else return N(IJ,-oJ);end;TJ=2;end;end;return(IJ*p[oJ])%m;end;N=N or function(rV,TV)if not(TV>=f8)then else return 0;end;if TV<0X000 then return q(rV,-TV);end;local LV=0X1;local bV=nil;do while true do if LV==0x0 then return bV-bV%0X01;else bV=(rV%m/p[TV]);LV=0;end;end;end;end;local X=zZ.match;local fZ,o={},function(L5,Q5,g5)local y5,a5=1,(nil);repeat if not(y5<=0)then do if y5==0X1 then a5=(L5/p[Q5])%p[g5];y5=0X002;else a5=a5-a5%0X1;y5=0;end;end;else return a5;end;until false;end;do T8=0X006;end;local AZ,aZ,GZ,SZ,vZ,WZ,UZ,ZZ=nil,nil,nil,nil,nil,nil,nil,(nil);repeat do if not(T8<=0X3)then do if not(T8<=0X00005)then if T8~=0x6 then SZ=function()local je,Ye=nil,nil;do for fD=0X00,0X1 do if fD~=0x0 then Ye=AZ();else je=AZ();end;end;end;local Te,oe=0X0000,nil;while 0.7543484416582369 do if Te~=0 then do if not(je==uZ and Ye==0X0)then else return 0.0;end;end;break;else do oe=1;end;Te=0X1;end;end;local Ce=((-0x1)^o(Ye,0X1f,0X1));local Ie=(o(Ye,20,0XB));local ae=o(Ye,0X0,0x14)*m+je;for d7=0,0X00001 do if d7==0X00000 then do if Ie==0X0 then if ae==uZ then return Ce*0;else for Ji=0,0x00001 do do if Ji~=0X000 then do oe=uZ;end;else Ie=0X1;end;end;end;end;elseif Ie~=0X007ff then elseif ae==0X0 then return Ce*(0/0);else do return Ce*(0X1/0);end;end;end;else do return Ce*(2^(Ie-0X3fF))*(ae/R+oe);end;end;end;end;T8=0;else AZ=function()local fU,zU,sU,UU=nil,nil,nil,(nil);local ZU=(0X2);while true do do if ZU<=0X000 then D=D+0X4;ZU=0x00001;else if ZU~=0X01 then fU,zU,sU,UU=T(I,D,D+3);ZU=0x0;else do return UU*w8+sU*0X10000+zU*256+fU;end;end;end;end;end;end;T8=0X03;end;else do if T8==4 then WZ=t();T8=1;else GZ=function()local Ty=0;local my=0X000;do while 0.6112981632327985 do local ls=T(I,D,D);D=D+0x1;do Ty=Ty+((ls>0x0007F and ls-0X80 or ls)*p[my]);end;if ls<0X80 then do return Ty;end;end;my=my+0X007;end;end;end;T8=7;end;end;end;end;else if not(T8<=1)then if T8~=0X2 then aZ=function()local YB,rB=nil,nil;local iB=(0x0);repeat if not(iB<=0x00)then do if iB~=1 then return rB*m+YB;else do if rB==0X00000 then do return YB;end;elseif not(rB>=H)then else rB=rB-m;end;end;do iB=0X2;end;end;end;else do YB,rB=AZ(),AZ();end;do iB=1;end;end;until(false);end;T8=5;else do ZZ=function(...)return v("#",...),{...};end;end;do break;end;end;else if T8~=0x0 then UZ={[1]=fZ};do T8=0x02;end;else vZ=function()local OE=(GZ());if not(OE>=R)then else return OE-C;end;do return OE;end;end;T8=4;end;end;end;end;until(false);local wZ=(1);local TZ=function()w("\089o\117r \101nv\105ro\110m\101\110\116\032does\032\110o\116\032supp\111r\116 Lua\074IT\039s F\070\073\032\108\105\098r\097r\121\044 t\104e\114\101fo\114\101\032\121o\117\032\099a\110no\116 use\032\076\076\047\085\076\076/i s\117ff\105x\101\115.");end;local Z,F,EZ,eZ,gZ=type,rawget,nil,nil,nil;do for e8=0X0,3 do do if not(e8<=1)then if e8~=2 then else gZ=function(rN)local JN=(AZ());local KN=('');do for tj=0,2 do if tj<=0 then for yK=lZ,JN,7997 do local kK,QK,PK=2,nil,(nil);repeat do if kK<=1 then if kK~=0 then for Lt=0X1,#PK do local kt=(1);while(true)do if kt==0 then WZ=(rN*WZ+19)%0X100;break;else do PK[Lt]=Q(PK[Lt],WZ);end;kt=0X0;end;end;end;kK=4;else do PK={T(I,D+yK-lZ,D+QK-0X00001)};end;kK=1;end;elseif kK==0X002 then QK=yK+0X1F3d-0X01;kK=0x3;else if QK>JN then QK=JN;end;kK=0;end;end;until kK==4;KN=KN..E(d(PK));end;else do if tj~=0X1 then return KN;else D=D+JN;end;end;end;end;end;end;end;else if e8==0X0000 then EZ=TZ;else eZ=TZ;end;end;end;end;end;local jZ=(TZ);local function XZ(b8,R8,I8)local X8=(b8[8]);local o8=(b8[0X7]);local h8,H8=b8[0X3],(b8[0X5]);local F8=b8[0X0002];local O8=(b8[0X09]);local u8,i8=b8[1],b8[4];local M8=O({},{__mode='v'});local r8=nil;r8=function(...)local hm,Lm={},(0);local Tm=0X1;local Jm=(K and K()or _ENV);local Ym={[2]=b8,[0X001]=hm};local mm,Um=ZZ(...);local Mm=(Jm==z and R8 or Jm);mm=mm-0X1;for wS=0,mm do if not(u8>wS)then break;else do hm[wS]=Um[wS+0X00001];end;end;end;if not h8 then Um=nil;else if H8 then(hm)[u8]={n=mm>=u8 and mm-u8+0X0001 or 0,d(Um,u8+1,mm+0x001)};end;end;if Mm~=Jm then do if not(c)th
+}) 
 Tab:AddButton({
       Name = "阿尔宙斯V3.0 UI",
       Callback = function()
