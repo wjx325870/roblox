@@ -13,7 +13,9 @@ local Window = Library:CreateWindow({
     Footer = "v1.0.0",
     Center = true,
     AutoShow = true
-})
+}
 
-
-
+local Tabs = {
+	Main = Window:AddTab("Main", "user"),
+	["UI Settings"] = Window:AddTab("UI Settings", "settings"),
+}
