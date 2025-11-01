@@ -15,7 +15,3 @@ local Window = Library:CreateWindow({
     AutoShow = true
 }
 
-local Tabs = {
-	Main = Window:AddTab("Main", "user"),
-	["UI Settings"] = Window:AddTab("UI Settings", "settings"),
-}
